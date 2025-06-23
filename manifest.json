@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "OOP Quiz Master",
+  "version": "1.0",
+  "description": "Learn Object Oriented Programming with MCQ questions every time you switch tabs or open Chrome",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

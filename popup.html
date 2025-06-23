@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOP Quiz Master</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <h1>OOP Quiz Master</h1>
+      </div>
+      <div class="toggle-wrapper">
+        <label class="toggle">
+          <input type="checkbox" id="enableToggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="current-question">
+        <h2>Practice Question</h2>
+        <div class="question-card" id="currentQuestion">
+          <div class="question-text">What is encapsulation in OOP?</div>
+          <div class="options-preview">
+            <div>A. Hiding implementation details</div>
+            <div>B. Creating multiple instances</div>
+            <div>C. Inheriting properties</div>
+            <div>D. Overriding methods</div>
+          </div>
+        </div>
+        <button class="btn-secondary" id="newQuestionBtn">
+          New Question
+        </button>
+      </section>
+
+      <section class="questions-section">
+        <div class="section-header">
+          <h2>Your Questions</h2>
+          <button class="btn-primary" id="addQuestionBtn">
+            Add Question
+          </button>
+        </div>
+        
+        <div class="question-input-wrapper" id="questionInputWrapper" style="display: none;">
+          <textarea 
+            id="newQuestionInput" 
+            placeholder="Enter your OOP question..."
+            rows="2"
+          ></textarea>
+          <div class="options-input">
+            <input type="text" id="option1" placeholder="Option A" />
+            <input type="text" id="option2" placeholder="Option B" />
+            <input type="text" id="option3" placeholder="Option C" />
+            <input type="text" id="option4" placeholder="Option D" />
+            <select id="correctAnswer">
+              <option value="0">A is correct</option>
+              <option value="1">B is correct</option>
+              <option value="2">C is correct</option>
+              <option value="3">D is correct</option>
+            </select>
+          </div>
+          <div class="input-actions">
+            <button class="btn-secondary" id="cancelBtn">Cancel</button>
+            <button class="btn-primary" id="saveBtn">Save</button>
+          </div>
+        </div>
+
+        <div class="questions-list" id="questionsList">
+          <!-- Questions will be loaded here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
